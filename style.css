@@ -1,0 +1,183 @@
+/* Form section */
+.show_skill ul li:nth-child(odd) {
+  background: rgb(215, 215, 236);
+}
+.ml-auto {
+  margin-left: auto !important;
+}
+h2 {
+  color: #811169 !important;
+}
+.mr-auto {
+  margin-right: auto !important;
+}
+.card-body {
+  flex: 1 1 auto;
+  padding: 1rem 1rem;
+  background: linear-gradient(45deg, #02d312, #219ee7f5);
+}
+.shadow {
+  box-shadow: 0 0.5rem 1rem rgba(01, 09, 08, 0.5) !important;
+}
+.card-img {
+  position: relative;
+  background-image: url("image/blank-clock-template-pink-removebg-preview.png");
+  width: 360px;
+  height: 360px;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+.card-img::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: rgb(255, 0, 255);
+  border-radius: 50%;
+}
+.second,
+.munits,
+.hour {
+  width: 0px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+}
+.second::before {
+  position: absolute;
+  content: "";
+  width: 3px;
+  height: 160px;
+  background-color: violet;
+}
+.munits {
+  height: 200px;
+}
+.munits::before {
+  position: absolute;
+  content: "";
+  width: 3px;
+  height: 135px;
+  background-color: rgb(130, 238, 162);
+}
+.hour {
+  height: 160px;
+}
+.hour::before {
+  position: absolute;
+  content: "";
+  width: 3px;
+  height: 114px;
+  background-color: rgb(209, 32, 171);
+}
+
+/* Analog clock with bg clock hands */
+
+.clock_img {
+  margin: auto;
+  width: 360px;
+  height: 360px;
+  background-image: url("image/G1864-removebg-preview.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hand_second,
+.hand_hour,
+.hand_munits {
+  height: 346px;
+  transform: rotate(0deg);
+  display: flex;
+  justify-content: center;
+}
+.hand_second::before,
+.hand_munits::before,
+.hand_hour::before {
+  content: "";
+  width: 62px;
+  height: 218px;
+  background-image: url("image/flower_clock_hands1-removebg-preview.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  z-index: 9999;
+}
+.hand_munits {
+  height: 250px;
+}
+.hand_munits::before {
+  width: 45px;
+  height: 170px;
+  /* background-image: url("image/Custom-Made-Wall-Clock-Hands-Colorful-Second-Hands-8-Inch2-removebg-preview.png") !important; */
+  z-index: 2 !important;
+}
+.hand_hour {
+  height: 178px;
+}
+.hand_hour::before {
+  background-image: url("image/flower_clock_hands2-removebg-preview.png") !important;
+  width: 27px;
+  height: 149px;
+  z-index: 1 !important;
+}
+
+/*  Calculator CSS */
+
+.button_key {
+  display: flex;
+  flex-wrap: wrap;
+}
+.button_key button {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: auto;
+  width: 25%;
+  background: linear-gradient(45deg, black, transparent);
+  color: #fff;
+  padding: 16px;
+  font-size: 23px;
+  border: 0;
+}
+.button_key button:hover {
+  background-color: #524a52;
+}
+.input_display {
+  font-size: 35px;
+  color: #f1f1f1a6;
+}
+.cal_body {
+  padding: 38px;
+}
+.display {
+  background: linear-gradient(45deg, black, #2c242c80);
+  color: white;
+  padding: 12px;
+  text-align: end;
+  height: 35%;
+  font-size: 59px;
+}
+.calculator {
+  background: #2d3749;
+  width: 300px;
+  height: 500px;
+  border-radius: 20px;
+  margin: auto;
+  overflow: hidden;
+  box-shadow: 0px 0px 12px #918181;
+}
+.pink {
+  background: linear-gradient(#bb87e1, #d75fad) !important;
+  border: none !important;
+}
+.pink:hover {
+  background: linear-gradient(#9244ca, #993c78) !important;
+  border: none !important;
+}
+.pink_txt {
+  color: #da6ce6 !important;
+}

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      MWRN _ Class _ 15(Analog clock, Calculator, inslant data change)
+    </title>
+    <!-- Font awesome CDN link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+      integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+          <div class="card shadow">
+            <div class="card-body">
+              <h2 class="text-center">Instant showing value</h2>
+              <form id="form">
+                <div class="form-group">
+                  <label for="text">Name</label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    name="text"
+                    id="text"
+                  />
+                  <br />
+                  <div class="show_name"></div>
+                </div>
+
+                <div class="form-control">
+                  <span>Select Your Skill's</span><br />
+                  <input type="checkbox" name="htmll" id="html" value="HTML" />
+                  <label for="html">HTML</label><br />
+                  <input type="checkbox" name="css" id="css" value="CSS" />
+                  <label for="css">CSS</label><br />
+                  <input type="checkbox" name="ja" id="js" value="JavaScript" />
+                  <label for="js">JavaScript</label><br />
+                  <input type="checkbox" name="php" id="php" value="PHP" />
+                  <label for="php">PHP</label><br />
+                  <input
+                    type="checkbox"
+                    name="phython"
+                    id="Phython"
+                    value="Phython"
+                  />
+                  <label for="Phython">Phython</label><br />
+                  <input
+                    type="checkbox"
+                    name="golang"
+                    id="golang"
+                    value="Go-lang"
+                  />
+                  <label for="golang">golang</label><br />
+                </div>
+                <div class="show_skill"></div>
+                <div class="skill_text"></div>
+                <hr />
+                <div class="form-control">
+                  <span>Select Gender</span><br />
+                  <input type="radio" name="gender" id="Male" value="Male" />
+                  <label for="Male">Male</label><br />
+                  <input
+                    type="radio"
+                    name="gender"
+                    id="Female"
+                    value="Female"
+                  />
+                  <label for="Female">Female</label><br />
+                </div>
+                <div class="show_gender"></div>
+
+                <hr />
+
+                <div class="form-group">
+                  <select class="form-control" name="location" id="location">
+                    <option value="">-Select-</option>
+                    <option value="Madaripur">Madaripur</option>
+                    <option value="Dhaka">Dhaka</option>
+                    <option value="Khulna">Khulna</option>
+                    <option value="Singapore">Singapore</option>
+                  </select>
+                  <br />
+                  <div class="show_distic"></div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3"></div>
+      </div>
+      <!--row-->
+    </div>
+    <!--container-->
+
+    <!-- Analog clock section -->
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card shadow my-5 ml-auto">
+            <div class="card-body">
+              <h2 class="text-center">Analog clock with CSS clock hands</h2>
+              <div class="card-img">
+                <div class="second"></div>
+                <div class="munits"></div>
+                <div class="hour"></div>
+              </div>
+              <!--card image-->
+            </div>
+            <!--card body-->
+          </div>
+          <!--card-->
+        </div>
+        <!--col md -6-->
+        <!-- Analog clock with image ckick hands -->
+        <div class="col-md-6">
+          <div class="card shadow my-5 mr-auto">
+            <div class="card-body">
+              <h2 class="text-center">Analog clock with image clock hands</h2>
+              <div class="clock_img">
+                <div class="hand_second"></div>
+                <div class="hand_munits"></div>
+                <div class="hand_hour"></div>
+              </div>
+              <!--clock image-->
+            </div>
+            <!--card body-->
+          </div>
+          <!--card-->
+        </div>
+        <!--col md-6-->
+
+        <div class="row">
+          <div class="col-md-3"></div>
+          <div class="col-md-6">
+            <div id="calculator" class="shadow">
+              <div class="cal_body">
+                <div class="calculator">
+                  <div class="display">
+                    <div class="input_display">0</div>
+                    <div class="result_display"></div>
+                  </div>
+                  <!--display-->
+                  <div class="button_key">
+                    <button onclick="all_clear()" class="pink_txt" value="AC">
+                      AC
+                    </button>
+                    <button onclick="back()" class="pink_txt" value="C">
+                      C
+                    </button>
+                    <button class="key pink_txt" value="%">%</button>
+                    <button class="key pink" value="/">/</button>
+                    <button class="key" value="7">7</button>
+                    <button class="key" value="8">8</button>
+                    <button class="key" value="9">9</button>
+                    <button class="key pink" value="*">*</button>
+                    <button class="key" value="4">4</button>
+                    <button class="key" value="5">5</button>
+                    <button class="key" value="6">6</button>
+                    <button class="key pink" value="-">-</button>
+                    <button class="key" value="1">1</button>
+                    <button class="key" value="2">2</button>
+                    <button class="key" value="3">3</button>
+                    <button class="key pink" value="+">+</button>
+                    <button class="key" value="0">0</button>
+                    <button class="key" value=",">,</button>
+                    <button class="key" value=".">.</button>
+                    <button onclick="equal()" class="equal pink" value="=">
+                      =
+                    </button>
+                  </div>
+                  <!--button key-->
+                </div>
+                <!--calculator-->
+              </div>
+            </div>
+          </div>
+          <!--col md- 6 -->
+          <div class="col-md-3"></div>
+        </div>
+        <!--row-->
+      </div>
+      <!--row-->
+    </div>
+    <!--container-->
+
+    <script src="script.js"></script>
+  </body>
+</html>
